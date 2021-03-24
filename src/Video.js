@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react'
 import "./Video.css"
 import videofile from './Videos/first_video.mp4'
+import VideoFooter from './VideoFooter'
+import VideoSidebar from './VideoSidebar'
+
 function Video() {
     const [playing, setPlaying] = useState(false);
     
@@ -21,7 +24,8 @@ function Video() {
     return (
         <div className="video">
             <video className="video__player" onClick={handleVideoPress} loop ref={videoRef} src={videofile} type="video/mp4"></video>
-            {/* VideoFooter */}
+            <VideoFooter/>
+            <VideoSidebar/>
             {/* VideoSidebar */}
         </div>
     )
