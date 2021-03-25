@@ -24,8 +24,8 @@ function Video() {
     return (
         <div className="video">
             <video className="video__player" onClick={handleVideoPress} loop ref={videoRef} src={videofile} type="video/mp4"></video>
-            <VideoFooter/>
-            <VideoSidebar/>
+            <VideoFooter channel='hello' description='follow me' song='React is fire'/>
+            <VideoSidebar likes={10} shares={20} messages={30}/>
             {/* VideoSidebar */}
         </div>
     )
